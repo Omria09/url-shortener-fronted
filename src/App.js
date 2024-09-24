@@ -1,10 +1,12 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import logo from './assets/v2.gif'
+import { set } from 'mongoose';
 
 function App() {
   const [originalUrl, setOriginalUrl] = useState('');
   const [shortUrl, setShortUrl] = useState('');
+  const [clicks, setClicks] = useState('');
   const [copySuccess, setCopySuccess] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const host = 'https://link.ktzr.lol/';
@@ -55,6 +57,7 @@ function App() {
       const response = await axios.post(`${host}api/shorten`, { originalUrl });
       if (response.data.shortUrl) {
         setErrorMsg();
+        setClicks(response.data.clicks);
         setShortUrl(`${host}api/${response.data.shortUrl}`);
       } else {
         setShortUrl();
@@ -98,6 +101,7 @@ function App() {
           <button onClick={shortenUrl} className='shorten-button'><span>Shorten  </span></button>
           {shortUrl && <div className={`result-div copy-text ${copySuccess? 'active' : ''}`}>
           <p className='result barlow-condensed-regular'>Short URL: <a href={shortUrl}>{shortUrl}</a></p>
+          <p className='result barlow-condensed-regular'>Visits: {clicks}</p>
           <button onClick={handleCopy} id="copyButton"><i className="fa fa-copy"></i></button>
           </div>}
           {<p className='result barlow-condensed-regular'>{errorMsg}</p>}
