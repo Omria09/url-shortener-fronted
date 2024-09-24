@@ -8,7 +8,6 @@ function App() {
   const [copySuccess, setCopySuccess] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const host = 'https://url-shortener-production-a61e.up.railway.app/';
-  const fronted = 'https://main--willowy-sunshine-0aa9f4.netlify.app/';
 
     // State to hold the message from the query parameter
     const [message, setMessage] = useState('');
