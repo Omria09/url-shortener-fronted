@@ -7,7 +7,7 @@ function App() {
   const [shortUrl, setShortUrl] = useState('');
   const [copySuccess, setCopySuccess] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-  const host = 'https://web-production-083b.up.railway.app/';
+  const host = 'link.ktzr.lol/';
 
     // State to hold the message from the query parameter
     const [message, setMessage] = useState('');
