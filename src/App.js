@@ -7,7 +7,8 @@ function App() {
   const [shortUrl, setShortUrl] = useState('');
   const [copySuccess, setCopySuccess] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-
+  const host = 'https://url-shortener-production-a61e.up.railway.app/';
+  const fronted = 'https://main--willowy-sunshine-0aa9f4.netlify.app/';
 
     // State to hold the message from the query parameter
     const [message, setMessage] = useState('');
@@ -52,10 +53,10 @@ function App() {
     }
     setErrorMsg('');
     try {
-      const response = await axios.post('http://localhost:5000/api/shorten', { originalUrl });
+      const response = await axios.post(`${host}/api/shorten`, { originalUrl });
       if (response.data.shortUrl) {
         setErrorMsg();
-        setShortUrl(`http://localhost:5000/api/${response.data.shortUrl}`);
+        setShortUrl(`${host}/api/${response.data.shortUrl}`);
       } else {
         setShortUrl();
         setErrorMsg('Invalid URL');
