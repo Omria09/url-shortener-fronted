@@ -28,7 +28,7 @@ function App() {
       gtag('config', 'G-MNKB2PDWF0'); 
   
       const script = document.createElement('script');
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MNKB2PDWF0'; 
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-3HPPKYCHD1'; 
       script.async = true;
       document.head.appendChild(script);
     }, []);
