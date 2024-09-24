@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TO BUILD:
+
+1. mongod on backend
+2. node server.js on backend
+3. npm start on client
 
 ## Available Scripts
 
