@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import logo from './assets/v2.gif'
-import { set } from 'mongoose';
 
 function App() {
   const [originalUrl, setOriginalUrl] = useState('');
@@ -99,10 +98,13 @@ function App() {
             placeholder="Enter URL"
           />
           <button onClick={shortenUrl} className='shorten-button'><span>Shorten  </span></button>
-          {shortUrl && <div className={`result-div copy-text ${copySuccess? 'active' : ''}`}>
-          <p className='result barlow-condensed-regular'>Short URL: <a href={shortUrl}>{shortUrl}</a></p>
-          <p className='result barlow-condensed-regular'>Visits: {clicks}</p>
-          <button onClick={handleCopy} id="copyButton"><i className="fa fa-copy"></i></button>
+          {shortUrl &&
+            <div className={`result-div copy-text ${copySuccess? 'active' : ''}`}>
+            <div className='link-div'>
+              <p className='result barlow-condensed-regular'>Short URL: <a href={shortUrl}>{shortUrl}</a></p>
+              <button onClick={handleCopy} id="copyButton"><i className="fa fa-copy"></i></button>
+            </div>
+              <p className='visits barlow-condensed-regular'>Visits: {clicks}</p>
           </div>}
           {<p className='result barlow-condensed-regular'>{errorMsg}</p>}
       </div>
