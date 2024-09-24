@@ -7,7 +7,7 @@ function App() {
   const [shortUrl, setShortUrl] = useState('');
   const [copySuccess, setCopySuccess] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-  const host = 'https://url-shortener-production-a61e.up.railway.app/';
+  const host = 'https://web-production-083b.up.railway.app/';
 
     // State to hold the message from the query parameter
     const [message, setMessage] = useState('');
