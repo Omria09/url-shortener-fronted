@@ -53,11 +53,11 @@ function App() {
     }
     setErrorMsg('');
     try {
-      const response = await axios.post(`${host}api/shorten`, { originalUrl });
+      const response = await axios.post(`${host}shorten`, { originalUrl });
       if (response.data.shortUrl) {
         setErrorMsg();
         setClicks(response.data.clicks);
-        setShortUrl(`${host}api/${response.data.shortUrl}`);
+        setShortUrl(`${host}/${response.data.shortUrl}`);
       } else {
         setShortUrl();
         setErrorMsg('Invalid URL');
