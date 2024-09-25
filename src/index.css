@@ -147,6 +147,7 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: text;
 }
 .result-div p a{
   text-decoration: none; /* Remove underline */

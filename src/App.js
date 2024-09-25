@@ -9,41 +9,39 @@ function App() {
   const [copySuccess, setCopySuccess] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const host = 'https://link.ktzr.lol/';
+  const [message, setMessage] = useState('');
 
-    // State to hold the message from the query parameter
-    const [message, setMessage] = useState('');
+  // read query parameters
+  const getQueryParameter = (name) => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
+  };
 
-    // Function to read query parameters
-    const getQueryParameter = (name) => {
-      const params = new URLSearchParams(window.location.search);
-      return params.get(name);
-    };
+  useEffect(() => {
+    // Load Google Analytics
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-MNKB2PDWF0'); 
 
-    useEffect(() => {
-      // Load Google Analytics
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-MNKB2PDWF0'); 
-  
-      const script = document.createElement('script');
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-3HPPKYCHD1'; 
-      script.async = true;
-      document.head.appendChild(script);
-    }, []);
+    const script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-3HPPKYCHD1'; 
+    script.async = true;
+    document.head.appendChild(script);
+  }, []);
 
-    // Effect to read the message from the query parameters when the component mounts
-    useEffect(() => {
-      const msg = getQueryParameter('message');
-      if (msg) {
-        setMessage(decodeURIComponent(msg)); //display error for 5 seconds
-        setTimeout(() => {
-          setMessage();
-        }, 5000);
-      }
-    }, []);
+  // read the message from the query parameters when the component mounts
+  useEffect(() => {
+    const msg = getQueryParameter('message');
+    if (msg) {
+      setMessage(decodeURIComponent(msg)); //display error for 5 seconds
+      setTimeout(() => {
+        setMessage();
+      }, 5000);
+    }
+  }, []);
 
 
   const shortenUrl = async () => {
