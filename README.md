@@ -1,47 +1,83 @@
-# URL Shortener
+# 🌐 URL Shortener
 
-This URL shortener application allows users to create shortened versions of long URLs. The application is accessible at [ktzr.lol](https://ktzr.lol).
+Welcome to the **URL Shortener** application! This tool allows users to shorten long URLs into more manageable links. You can access the live application at [ktzr.lol](https://ktzr.lol).
 
-## Setup Instructions
+## 🛠️ Setup Instructions
 
-1. Clone the repository to your local machine.
-2. Ensure you have Node.js and MongoDB installed on your system.
+### Prerequisites
 
-### Backend Setup
+- Ensure that [Node.js](https://nodejs.org/) and [MongoDB](https://www.mongodb.com/) are installed on your system.
 
-1. Navigate to the backend directory.
-2. Run `npm install` to install the required dependencies.
-3. Start MongoDB by running `mongod` in a terminal.
-4. Start the backend server by running `node server.js`.
+### 1. Clone the Repository
 
-### Frontend Setup
+```bash
+git clone https://github.com/yourusername/url-shortener.git
+cd url-shortener
+```
 
-1. Navigate to the frontend directory.
-2. Run `npm install` to install the required dependencies.
-3. Start the frontend development server by running `npm start`.
+### 2. Backend Setup
 
-## Running the Application
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Install the required dependencies:
+   ```bash
+   npm install
+   ```
+3. Start MongoDB:
+   ```bash
+   mongod
+   ```
+4. Run the backend server:
+   ```bash
+   node server.js
+   ```
 
-1. Ensure the backend server is running (`mongod` and `node server.js`).
-2. Ensure the frontend development server is running (`npm start`).
-3. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to access the application locally.
-4. To access the live application, visit [ktzr.lol](https://ktzr.lol).
+### 3. Frontend Setup
 
-## Testing the Application
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd ../frontend
+   ```
+2. Install the frontend dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend development server:
+   ```bash
+   npm start
+   ```
 
-To run the tests for this application:
+## 🚀 Running the Application
 
-1. Navigate to the frontend directory.
-2. Run `npm test` to launch the test runner in interactive watch mode.
+1. Ensure the backend (`mongod` and `node server.js`) is running.
+2. Ensure the frontend (`npm start`) is running.
+3. Open your web browser and navigate to:
+   - **Local Development**: [http://localhost:3000](http://localhost:3000)
+   - **Live Version**: [ktzr.lol](https://ktzr.lol)
 
-This will run the test suite, including the test in `App.test.js` which checks if the "learn react" link is rendered correctly.
+## 🧪 Testing the Application
 
-## Available Scripts
+To run tests for this application:
 
-In the frontend project directory, you can run:
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd frontend
+   ```
+2. Launch the test runner:
+   ```bash
+   npm test
+   ```
+   This will run all tests, including checking if the "learn react" link is rendered correctly in `App.test.js`.
 
-- `npm start`: Runs the app in development mode.
-- `npm test`: Launches the test runner in interactive watch mode.
-- `npm run build`: Builds the app for production to the `build` folder.
-- `npm run eject`: Removes the single build dependency from your project.
-  For more detailed information about these scripts, refer to the Create React App documentation.
+## 📜 Available Scripts
+
+Inside the `frontend` directory, the following scripts are available:
+
+- **`npm start`**: Runs the app in development mode.
+- **`npm test`**: Runs the test suite in watch mode.
+- **`npm run build`**: Builds the app for production in the `build` folder.
+- **`npm run eject`**: Ejects the app, allowing for full configuration control.
+
+Feel free to reach out for contributions or issues!
