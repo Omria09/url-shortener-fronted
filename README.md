@@ -61,6 +61,8 @@ cd url-shortener
 
 To run tests for this application:
 
+Fronted:
+
 1. Navigate to the `frontend` directory:
    ```bash
    cd frontend
@@ -69,11 +71,23 @@ To run tests for this application:
    ```bash
    npm test
    ```
-   This will run all tests, including checking if the "learn react" link is rendered correctly in `App.test.js`.
+   This will run all tests in `App.test.js`.
+
+Backend:
+
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Launch the test runner:
+   ```bash
+   npm test
+   ```
+   This will run all tests in `url.test.js`.
 
 ## 📜 Available Scripts
 
-Inside the `frontend` directory, the following scripts are available:
+Inside the `frontend` and `backend` directories, the following scripts are available:
 
 - **`npm start`**: Runs the app in development mode.
 - **`npm test`**: Runs the test suite in watch mode.
