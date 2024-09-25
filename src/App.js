@@ -57,7 +57,7 @@ function App() {
       if (response.data.shortUrl) {
         setErrorMsg();
         setClicks(response.data.clicks);
-        setShortUrl(`${host}/${response.data.shortUrl}`);
+        setShortUrl(`${host}${response.data.shortUrl}`);
       } else {
         setShortUrl();
         setErrorMsg('Invalid URL');
