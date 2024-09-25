@@ -8,8 +8,11 @@ function App() {
   const [clicks, setClicks] = useState('');
   const [copySuccess, setCopySuccess] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-  const host = 'https://link.ktzr.lol/';
   const [message, setMessage] = useState('');
+  
+
+  // Get the base URL from environment variables
+  const host = process.env.REACT_APP_API_BASE_URL;
 
   // read query parameters
   const getQueryParameter = (name) => {
