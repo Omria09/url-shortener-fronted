@@ -66,6 +66,8 @@ function App() {
       }
     } catch (error) {
       console.error('Error shortening URL', error);
+      setShortUrl();
+      setErrorMsg('Invalid URL');
     }
   };
 
